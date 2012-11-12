@@ -1,0 +1,117 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>heignamerican</groupId>
+	<artifactId>GoogleCalendarBirthdayListRegistry</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>GoogleCalendarBirthdayListRegistry</name>
+	<url></url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jre.version>1.7</jre.version>
+		<gdata.libs.dir>${basedir}/libs/gdata</gdata.libs.dir>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>repo2_maven_org</id>
+			<url>http://repo2.maven.org/maven2</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<source>${jre.version}</source>
+						<target>${jre.version}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<configuration>
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>true</downloadJavadocs>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>heignamerican</groupId>
+			<artifactId>myutils</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>11.0.2</version>
+		</dependency>
+
+		<!--
+			http://ameblo.jp/ouobpo/entry-10051976866.html
+			(1) のやり方がめんどくさい・・・
+			かと言って、(2) は邪道っぽい。
+		-->
+		<dependency>
+			<groupId>com.google.calendar</groupId>
+			<artifactId>gdata-calendar</artifactId>
+			<version>2.0</version>
+			<scope>system</scope>
+			<systemPath>${gdata.libs.dir}/gdata-calendar-2.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.google.calendar</groupId>
+			<artifactId>gdata-calendar-meta</artifactId>
+			<version>2.0</version>
+			<scope>system</scope>
+			<systemPath>${gdata.libs.dir}/gdata-calendar-meta-2.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.google.calendar</groupId>
+			<artifactId>gdata-client</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${gdata.libs.dir}/gdata-client-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.google.calendar</groupId>
+			<artifactId>gdata-client-meta</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${gdata.libs.dir}/gdata-client-meta-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.google.calendar</groupId>
+			<artifactId>gdata-core</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${gdata.libs.dir}/gdata-core-1.0.jar</systemPath>
+		</dependency>
+		<!-- ここまで邪道 -->
+	</dependencies>
+</project>
