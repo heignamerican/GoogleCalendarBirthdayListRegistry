@@ -71,47 +71,10 @@
 			<artifactId>guava</artifactId>
 			<version>11.0.2</version>
 		</dependency>
-
-		<!--
-			http://ameblo.jp/ouobpo/entry-10051976866.html
-			(1) のやり方がめんどくさい・・・
-			かと言って、(2) は邪道っぽい。
-		-->
 		<dependency>
-			<groupId>com.google.calendar</groupId>
-			<artifactId>gdata-calendar</artifactId>
-			<version>2.0</version>
-			<scope>system</scope>
-			<systemPath>${gdata.libs.dir}/gdata-calendar-2.0.jar</systemPath>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>core</artifactId>
+			<version>1.47.1</version>
 		</dependency>
-		<dependency>
-			<groupId>com.google.calendar</groupId>
-			<artifactId>gdata-calendar-meta</artifactId>
-			<version>2.0</version>
-			<scope>system</scope>
-			<systemPath>${gdata.libs.dir}/gdata-calendar-meta-2.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.google.calendar</groupId>
-			<artifactId>gdata-client</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${gdata.libs.dir}/gdata-client-1.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.google.calendar</groupId>
-			<artifactId>gdata-client-meta</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${gdata.libs.dir}/gdata-client-meta-1.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>com.google.calendar</groupId>
-			<artifactId>gdata-core</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${gdata.libs.dir}/gdata-core-1.0.jar</systemPath>
-		</dependency>
-		<!-- ここまで邪道 -->
 	</dependencies>
 </project>
